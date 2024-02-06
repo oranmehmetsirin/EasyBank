@@ -7,3 +7,5 @@ The site has been prepared as fully responsive.
 SCSS was used alongside HTML in the project.
 
 You can access the images of the project below.
+
+![Animation](https://github.com/oranmehmetsirin/EasyBank/blob/main/gif.gif?raw=true)
