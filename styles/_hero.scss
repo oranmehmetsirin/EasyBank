@@ -1,0 +1,65 @@
+.hero {
+    background-color: $veryLightGray;
+    .container {
+      @include breakpoint-up(large) {
+        display: flex;
+      }
+    }
+    &__image {
+      background-image: url("https://raw.githubusercontent.com/Udemig/9-hi-scss-pro-2/d5ff7948dabd5a071101dc9ba877ec1e5cbf21b6/images/bg-intro-mobile.svg");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      min-height: 17.5rem;
+      position: relative;
+      @include breakpoint-up(medium) {
+        min-height: 25rem;
+        background-position: center 70%;
+      }
+      @include breakpoint-up(large) {
+        flex: 3;
+        order: 2;
+        height: 41rem;
+      }
+      &::before {
+        @include breakpoint-up(large) {
+          content: "";
+          position: absolute;
+          background-image: url("https://raw.githubusercontent.com/Udemig/9-hi-scss-pro-2/d5ff7948dabd5a071101dc9ba877ec1e5cbf21b6/images/bg-intro-desktop.svg");
+          width: 150%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: 122%;
+          background-position: 11% 83%;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url("https://github.com/Udemig/9-hi-scss-pro-2/blob/main/images/image-mockups.png?raw=true");
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: 93%;
+        background-position: center center;
+        @include breakpoint-up(medium) {
+          background-size: 52%;
+        }
+        @include breakpoint-up(large) {
+          width: 120%;
+          height: 122%;
+          background-size: 94%;
+          background-position: center 150%;
+          left: 22%;
+        }
+      }
+    }
+    &__text {
+      text-align: center;
+      @include breakpoint-up(large) {
+        flex: 2;
+        order: 1;
+        text-align: left;
+      }
+    }
+  }
